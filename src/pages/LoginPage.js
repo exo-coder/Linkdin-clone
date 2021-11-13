@@ -1,11 +1,12 @@
 import React from 'react'
 import styled from "styled-components";
+import LoginPageHeader from '../components/LoginPageHeader';
 
 
 export default function LoginPage() {
     return (
         <Main>
-            <h1>LOGIN page</h1>
+            <LoginPageHeader />
         </Main>
     )
 }
