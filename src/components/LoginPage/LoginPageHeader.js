@@ -5,7 +5,7 @@ export default function LoginPageHeader() {
   return (
     <Main>
       <Logo>
-        <a href="">
+        <a href="a">
           <img src="/images/login-logo.svg" alt="" />
         </a>
         <JoinNow>Join now</JoinNow>
@@ -20,9 +20,6 @@ const Main = styled.div`
 `;
 
 const Logo = styled.div`
-  max-width: 1120px;
-  margin: auto;
-  padding: 10px;
   display: flex;
   align-items: center;
   position: relative;
@@ -49,6 +46,7 @@ color: rgba(0,0,0,0.6);
     background-color: rgba(0,0,0,0.08);
     color: rgba(0,0,0,0.78)
 }
+
 `;
 
 const SignInBtn = styled.button`
@@ -58,6 +56,7 @@ cursor: pointer;
 border-radius: 24px;
 width: 80px;
 height: 28px;
+margin-left: 10px;
 font-size: 14px;
 transition-duration: 160ms;
 
