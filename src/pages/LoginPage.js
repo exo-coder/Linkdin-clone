@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import LoginPageHeader from "../components/LoginPage/LoginPageHeader";
-import LoginTopPage from "../components/LoginPage/LoginTopPage";
+import LoginPageHeader from "../components/Login/LoginPageHeader";
+import LoginTopPage from "../components/Login/LoginTopPage";
 
 export default function LoginPage() {
   return (

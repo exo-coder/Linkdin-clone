@@ -10,7 +10,6 @@ import {
   NavWrap,
   NavItems,
   NavItem,
-  UserInfo,
   User,
   WorkList,
   SignOut,
@@ -52,7 +51,7 @@ export default function Header() {
               </a>
 
               <SignOut>
-                <a>Sign Out</a>
+                <a href=''>Sign Out</a>
               </SignOut>
             </User>
             <WorkList>
