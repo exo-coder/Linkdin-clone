@@ -5,7 +5,7 @@ export default function LoginPageHeader() {
   return (
     <Main>
       <Logo>
-        <a href="a">
+        <a href="/">
           <img src="/images/login-logo.svg" alt="" />
         </a>
         <JoinNow>Join now</JoinNow>
