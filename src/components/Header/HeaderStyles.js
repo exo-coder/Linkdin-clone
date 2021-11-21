@@ -61,7 +61,6 @@ export const Nav = styled.nav`
   margin-left: auto;
   display: block;
   margin-right: 30px;
-
 `;
 
 export const NavWrap = styled.ul`
@@ -71,8 +70,8 @@ export const NavWrap = styled.ul`
 `;
 
 export const NavItems = styled.div`
-display: flex;
-@media (max-width: 768px) {
+  display: flex;
+  @media (max-width: 768px) {
     position: fixed;
     margin: 0;
     left: 0;
@@ -135,7 +134,6 @@ export const NavItem = styled.li`
   }
 `;
 
-export const UserInfo = styled.div``;
 export const SignOut = styled.div`
   display: none;
   position: absolute;
@@ -147,11 +145,6 @@ export const SignOut = styled.div`
   font-size: 16px;
   transition-duration: 167ms;
   text-align: center;
-
-  @media (max-width: 768px) {
-    top: -30px;
-    width: 70px;
-  }
 `;
 
 export const User = styled(NavItem)`
