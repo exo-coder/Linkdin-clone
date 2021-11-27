@@ -32,4 +32,17 @@ export const TopSection = styled.section`
   }
 `;
 
-export const Layout = styled.div``;
+export const Layout = styled.div`
+  display: grid;
+  grid-template-areas: "Leftside Middside Rightside";
+  grid-template-columns: minmax(0, 5fr) minmax(0, 12fr) minmax(300px, 7fr);
+  column-gap: 25px;
+  row-gap: 25px;
+  margin: 25px 0;
+  padding: 15px;
+  @media (max-width: 870px) {
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+  }
+`;

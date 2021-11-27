@@ -17,7 +17,9 @@ export default function Home() {
         </p>
       </TopSection>
       <Layout>
-
+       <LeftSide />
+       <MiddSide />
+       <RightSide />
       </Layout>
     </Main>
   );

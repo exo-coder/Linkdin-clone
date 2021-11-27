@@ -25,3 +25,26 @@ export const HeaderNavDatas = [
         img : '/images/nav-notifications.svg'
     },
 ];
+
+export const IconsPartDatas = [
+    {
+        id : 1,
+        img: "/images/photo-icon.png",
+        span: "Photo"
+    },
+    {
+        id : 2,
+        img: "/images/event-icon.png",
+        span: "Event"
+    },
+    {
+        id : 3,
+        img: "/images/video-icon.png",
+        span: "Video"
+    },
+    {
+        id : 4,
+        img: "/images/article-icon.png",
+        span: "Article "
+    }
+];

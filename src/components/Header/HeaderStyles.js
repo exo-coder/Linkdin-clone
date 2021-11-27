@@ -8,6 +8,7 @@ export const Main = styled.div`
   top: 0;
   position: fixed;
   width: 100%;
+  z-index: 1;
 `;
 
 export const Content = styled.div`
