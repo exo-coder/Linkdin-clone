@@ -1,6 +1,14 @@
 import React from "react";
 import { IconsPartDatas } from "../../../../data/datas";
-import { Main, CommCard, ShareBox, PostPart, IconsPart } from "./MiddSideStyle";
+import {
+  Main,
+  CommCard,
+  ShareBox,
+  PostPart,
+  IconsPart,
+  MainArticle,
+  ShareActor,
+} from "./MiddSideStyle";
 
 export default function MiddSide() {
   return (
@@ -21,6 +29,18 @@ export default function MiddSide() {
           })}
         </IconsPart>
       </ShareBox>
+      <MainArticle>
+        <ShareActor>
+          <a>
+            <img src="/images/user.svg" alt="" />
+            <div>
+              <span>Title</span>
+              <span>Title</span>
+              <span>Title</span>                  
+            </div>
+          </a>
+        </ShareActor>
+      </MainArticle>
     </Main>
   );
 }

@@ -44,6 +44,9 @@ export const Search = styled.div`
     border: solid 1px;
     border-color: #15a2be;
   }
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const SearchIcon = styled.div`

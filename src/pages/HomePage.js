@@ -12,5 +12,9 @@ export default function HomePage() {
     )
 }
 
-const Main = styled.div``;
+const Main = styled.div`
+max-width: 1120px;
+align-items: center;
+margin: auto;
+`;
 

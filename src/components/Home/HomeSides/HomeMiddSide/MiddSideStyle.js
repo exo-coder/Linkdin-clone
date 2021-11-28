@@ -26,7 +26,6 @@ export const ShareBox = styled(CommCard)`
 export const PostPart = styled.div`
   display: flex;
   flex-direction: row;
-
   img {
     width: 50px;
     border-radius: 50%;
@@ -36,10 +35,13 @@ export const PostPart = styled.div`
     color: rgba(0, 0, 0, 0.7);
     font-weight: 700;
     font-size: 14px;
+    text-align: left;
+    padding-left: 15px;
     width: 100%;
     border-radius: 30px;
     background-color: none;
-    border: 3px solid rgba(0, 0, 0, 0.4);
+    border: 3px solid rgba(0, 0, 0, 0.2);
+    cursor: pointer;
   }
 `;
 
@@ -50,13 +52,13 @@ export const IconsPart = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  button {
+  button { 
     margin-top: 5px;
     outline: none;
     color: rgb(0, 0, 0, 0.7);
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.5;
-    padding: 10px;
+    padding: 5px;
     background: transparent;
     font-weight: 600;
     border-radius: 40px;
@@ -64,9 +66,14 @@ export const IconsPart = styled.div`
     flex-direction: row;
     &:hover {
       background-color: rgb(0, 0, 0, 0.1);
+      color: #70b5f9;
     }
   }
   img {
-    width: 20px;
+    width: 18px;
   }
 `;
+
+export const MainArticle = styled(CommCard)``;
+
+export const ShareActor = styled.div``;

@@ -7,7 +7,7 @@ export const Main = styled.div`
 
 export const TopSection = styled.section`
   min-height: 50px;
-  padding: 16px 0;
+  padding: 15px 0;
   box-sizing: content-box;
   text-align: center;
   text-decoration: underline;
@@ -38,9 +38,10 @@ export const Layout = styled.div`
   grid-template-columns: minmax(0, 5fr) minmax(0, 12fr) minmax(300px, 7fr);
   column-gap: 25px;
   row-gap: 25px;
-  margin: 25px 0;
+
   padding: 15px;
-  @media (max-width: 870px) {
+  @media (max-width: 768px) {
+    margin: 25px 0;
     display: flex;
     flex-direction: column;
     padding: 0 15px;
