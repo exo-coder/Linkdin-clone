@@ -1,5 +1,6 @@
 import React from "react";
 import { HeaderNavDatas } from "../../data/datas";
+import { useNavigate } from 'react-router-dom'
 import {
   Main,
   Content,
@@ -16,6 +17,10 @@ import {
 } from "./HeaderStyles";
 
 export default function Header() {
+  let nav = useNavigate();
+  const Logout = () => {
+    nav("/");
+  }
   return (
     <Main>
       <Content>
@@ -49,8 +54,7 @@ export default function Header() {
                 <img src="/images/user.svg" alt="" />
                 <span>Me</span>
               </a>
-
-              <SignOut>
+              <SignOut onClick={Logout}>
                 <a href=''>Sign Out</a>
               </SignOut>
             </User>

@@ -52,7 +52,7 @@ export const IconsPart = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  button { 
+  button {
     margin-top: 5px;
     outline: none;
     color: rgb(0, 0, 0, 0.7);
@@ -74,6 +74,54 @@ export const IconsPart = styled.div`
   }
 `;
 
-export const MainArticle = styled(CommCard)``;
+export const MainArticle = styled(CommCard)`
+.shared-img {
+margin: 0 -10px 10px -10px;
+}
+`;
 
-export const ShareActor = styled.div``;
+export const ShareActor = styled.div`
+  a {
+    display: flex;
+    flex-direction: row;
+  }
+
+  a > img {
+    width: 60px;
+    padding-right: 10px;
+  }
+
+  a > div {
+    display: flex;
+    flex-direction: column;
+    span {
+      text-align: left;
+      color: rgba(0, 0, 0, 0.8);
+      &:first-child {
+        font-weight: 600;
+      }
+    }
+  }
+
+  button {
+    position: absolute;
+    right: 12px;
+    top: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+`;
+
+export const Description = styled.div`
+text-align: left;
+padding: 10px 10px 10px 0;
+
+`;
+
+export const SharedImg = styled.div`
+position: relative;
+a > img {
+  width: 100%; 
+  max-height: 350px;
+}
+`;

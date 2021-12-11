@@ -2,12 +2,13 @@ import React from "react";
 import { IconsPartDatas } from "../../../../data/datas";
 import {
   Main,
-  CommCard,
   ShareBox,
   PostPart,
   IconsPart,
   MainArticle,
   ShareActor,
+  Description,
+  SharedImg,
 } from "./MiddSideStyle";
 
 export default function MiddSide() {
@@ -35,11 +36,20 @@ export default function MiddSide() {
             <img src="/images/user.svg" alt="" />
             <div>
               <span>Title</span>
-              <span>Title</span>
-              <span>Title</span>                  
+              <span>Info</span>
+              <span>Date</span>
             </div>
           </a>
+          <button>
+            <h1>. . .</h1>
+          </button>
         </ShareActor>
+        <Description>Desc</Description>
+        <SharedImg className="shared-img">
+          <a>
+            <img src="/images/pic-shared.jpeg" alt="" />
+          </a>
+        </SharedImg>
       </MainArticle>
     </Main>
   );
