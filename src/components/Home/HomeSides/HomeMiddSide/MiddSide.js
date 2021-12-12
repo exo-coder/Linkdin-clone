@@ -11,6 +11,7 @@ import {
   SharedImg,
 } from "./MiddSideStyle";
 
+
 export default function MiddSide() {
   return (
     <Main>
