@@ -14,9 +14,9 @@ export default function SignInHook() {
     nav("home");
   };
 
-  const onFailure = () => {
+  const onFailure = (res) => {
     alert(
-      `Failed to login. 😢 Please try again OR turn on VPN to change your IP then try!`
+      `Failed to login. 😢 Please try again OR turn on VPN to change your IP then try! ${res}`
     );
   };
 
