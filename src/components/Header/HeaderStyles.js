@@ -113,21 +113,6 @@ export const NavItem = styled.li`
     }
   }
 
-  /* span:after {
-    content: "";
-    transform: scaleX(1);
-    border-bottom: 3px solid var(--white, #fff);
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    transition: transform 0.2s ease-in-out;
-    width: 100%;
-    border-color: rgba(0, 0, 0, 0.9);
-    @media (max-width: 768px) {
-      display: none;
-    }
-  }
-  */
 
   &:hover {
     a {
@@ -146,7 +131,7 @@ export const SignOut = styled.div`
   border-radius: 0 0 5px 5px;
   width: 80px;
   height: 30px;
-  font-size: 16px;
+  font-size: 14px;
   transition-duration: 167ms;
   text-align: center;
 `;

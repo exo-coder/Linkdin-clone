@@ -1,6 +1,7 @@
 import React from "react";
 import { HeaderNavDatas } from "../../data/datas";
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+import SginOutHook from "../../hooks/SginOutHook";
 import {
   Main,
   Content,
@@ -13,7 +14,6 @@ import {
   NavItem,
   User,
   WorkList,
-  SignOut,
 } from "./HeaderStyles";
 
 export default function Header() {
@@ -50,13 +50,11 @@ export default function Header() {
             })}
             </NavItems>
             <User>
-              <a href="/home">
+              <a>
                 <img src="/images/user.svg" alt="" />
                 <span>Me</span>
               </a>
-              <SignOut onClick={Logout}>
-                <a href=''>Sign Out</a>
-              </SignOut>
+              <SginOutHook />
             </User>
             <WorkList>
               <a href="/home">

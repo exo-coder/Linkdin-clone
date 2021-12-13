@@ -86,7 +86,8 @@ const Google = styled.button`
   box-shadow: inset 0 0 0 1px black;
   border-radius: 24px;
   padding: 10px;
-
+  cursor: pointer;
+  
   p {
     padding: 5px;
     font-size: 18px;
