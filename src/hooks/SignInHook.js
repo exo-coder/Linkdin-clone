@@ -2,25 +2,40 @@ import React from "react";
 import styled from "styled-components";
 import GoogleLogin from "react-google-login";
 import { useNavigate } from "react-router-dom";
+//Redux
+import { useSelector, useDispatch } from "react-redux";
+import {
+  setUserLogInInfo,
+  selectUserName,
+  selectUserPhoto,
+} from "../app/userSlice";
 
 const clientID =
   "114509907275-h5gctlj9rlfjbpdt94vlnck7id7eorl0.apps.googleusercontent.com";
-export default function SignInHook({SignInBtnCondition = true}) {
+export default function SignInHook({ SignInBtnCondition = true }) {
+  const dispatch = useDispatch();
+  //const userName = useSelector(selectUserName);
+  //const userPhoto = useSelector(selectUserPhoto);
+
+  //select to next page
   let nav = useNavigate();
-  
   const onSuccess = (res) => {
-    console.log(
-      `${res.profileObj.name} + ${res.profileObj.email} + ${res.profileObj.imageUrl}`
+    dispatch(
+      setUserLogInInfo({
+        name: res.profileObj.name,
+        email: res.profileObj.email,
+        photo: res.profileObj.imageUrl,
+      })
     );
     nav("home");
   };
 
   const onFailure = () => {
-    alert(
-     "didn't Loged-In !"
-    );
+    alert("didn't Loged-In !");
     nav("/");
   };
+
+  //
 
   return (
     <GoogleLogin
@@ -49,8 +64,6 @@ export default function SignInHook({SignInBtnCondition = true}) {
     />
   );
 }
-
-
 
 const SignInBtn = styled.button`
   box-shadow: inset 0 0 0 1px #0a66c2;
@@ -81,8 +94,6 @@ const GoogleSginInBtn = styled.button`
   p {
     padding: 5px;
     font-size: 18px;
-    }
-  :hover {
     color: black;
   }
 `;

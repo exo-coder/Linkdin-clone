@@ -15,8 +15,14 @@ import {
   User,
   WorkList,
 } from "./HeaderStyles";
+//Redux
+import { useSelector } from "react-redux";
+import { selectUserName, selectUserPhoto } from "../../app/userSlice";
 
 export default function Header() {
+  const userName = useSelector(selectUserName);
+  const userPhoto = useSelector(selectUserPhoto);
+
   let nav = useNavigate();
   const Logout = () => {
     nav("/");
@@ -52,7 +58,7 @@ export default function Header() {
             <User>
               <a>
                 <img src="/images/user.svg" alt="" />
-                <span>Me</span>
+                <span>{userName}</span>
               </a>
               <SginOutHook />
             </User>
