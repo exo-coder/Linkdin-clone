@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import SignInHook from "../../hooks/SignInHook";
 
-export default function LoginTopPage() {
+export default function LoginTopPage() {  
   return (
     <Main>
       <Hero>
@@ -9,10 +10,7 @@ export default function LoginTopPage() {
         <h1>Wellcome to your profestional cummunity</h1>
       </Hero>
       <Form>
-        <Google>
-          <img src="/images/google.svg" alt="" />
-          <p> Sign in with Google </p>
-        </Google>
+        <SignInHook SignInBtnCondition={false} />
       </Form>
     </Main>
   );
@@ -77,19 +75,4 @@ const Form = styled.div`
   }
 `;
 
-const Google = styled.button`
-  display: flex;
-  justify-content: center;
-  background-color: #fff;
-  align-items: center;
-  width: 100%;
-  box-shadow: inset 0 0 0 1px black;
-  border-radius: 24px;
-  padding: 10px;
-  cursor: pointer;
-  
-  p {
-    padding: 5px;
-    font-size: 18px;
-  }
-`;
+
