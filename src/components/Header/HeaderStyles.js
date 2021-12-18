@@ -137,6 +137,7 @@ export const SignOut = styled.div`
 `;
 
 export const User = styled(NavItem)`
+  margin-right: 10px;
   a > svg {
     width: 24px;
     border-radius: 50%;
@@ -160,11 +161,8 @@ export const User = styled(NavItem)`
   }
 `;
 
-export const WorkList = styled(NavItem)`
+export const Menu = styled(NavItem)`
   a {
     border-left: 1px solid rgba(0, 0, 0, 0.08);
-    @media (max-width: 768px) {
-      border: none;
-    }
   }
 `;

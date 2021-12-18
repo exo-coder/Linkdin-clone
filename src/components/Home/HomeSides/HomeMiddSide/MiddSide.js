@@ -10,14 +10,20 @@ import {
   Description,
   SharedImg,
 } from "./MiddSideStyle";
-
+//redux
+import { useSelector } from "react-redux";
+import { selectUserName, selectUserPhoto, selectUserEmail } from "../../../../app/userSlice";
 
 export default function MiddSide() {
+  const userName = useSelector(selectUserName);
+  const userPhoto = useSelector(selectUserPhoto);
+  const userEmail = useSelector(selectUserEmail);
+
   return (
     <Main>
       <ShareBox>
         <PostPart>
-          <img src="/images/user.svg" alt="" />
+          <img src={userPhoto ? userPhoto : '/images/user.svg'} alt="" />
           <button>Start the post</button>
         </PostPart>
         <IconsPart>
@@ -34,10 +40,10 @@ export default function MiddSide() {
       <MainArticle>
         <ShareActor>
           <a>
-            <img src="/images/user.svg" alt="" />
+            <img src={userPhoto ? userPhoto : '/images/user.svg'} alt="" />
             <div>
-              <span>Title</span>
-              <span>Info</span>
+              <span>{userName ? userName : 'User'}</span>
+              <span>{userEmail ? userEmail : 'Email'}</span>
               <span>Date</span>
             </div>
           </a>

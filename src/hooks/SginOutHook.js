@@ -2,7 +2,7 @@ import React from "react";
 import { SignOut } from "../components/Header/HeaderStyles";
 import { GoogleLogout } from "react-google-login";
 import { useNavigate } from "react-router-dom";
-//Redux-nulling a
+//Redux-nulling
 import { useDispatch } from "react-redux";
 import { setUserLogOut } from "../app/userSlice";
 

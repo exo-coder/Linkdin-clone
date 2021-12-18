@@ -28,7 +28,7 @@ export const { setUserLogInInfo, setUserLogOut } = userSlice.actions;
 
 //selectors that i export for components i need:
 export const selectUserName = (state) => state.user.name; 
-export const selectUserEmail = (state) => state.user.name;
+export const selectUserEmail = (state) => state.user.email;
 export const selectUserPhoto = (state) => state.user.photo;
 
 export default userSlice.reducer;

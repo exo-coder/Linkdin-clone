@@ -3,30 +3,25 @@ import styled from "styled-components";
 import GoogleLogin from "react-google-login";
 import { useNavigate } from "react-router-dom";
 //Redux
-import { useSelector, useDispatch } from "react-redux";
-import {
-  setUserLogInInfo,
-  selectUserName,
-  selectUserPhoto,
-} from "../app/userSlice";
+import { useDispatch } from "react-redux";
+import { setUserLogInInfo } from "../app/userSlice";
 
 const clientID =
   "114509907275-h5gctlj9rlfjbpdt94vlnck7id7eorl0.apps.googleusercontent.com";
 export default function SignInHook({ SignInBtnCondition = true }) {
   const dispatch = useDispatch();
-  //const userName = useSelector(selectUserName);
-  //const userPhoto = useSelector(selectUserPhoto);
 
   //select to next page
   let nav = useNavigate();
   const onSuccess = (res) => {
     dispatch(
       setUserLogInInfo({
-        name: res.profileObj.name,
+        name: res.profileObj.givenName,
         email: res.profileObj.email,
         photo: res.profileObj.imageUrl,
       })
     );
+    console.log(res.profileObj);
     nav("home");
   };
 
@@ -34,8 +29,6 @@ export default function SignInHook({ SignInBtnCondition = true }) {
     alert("didn't Loged-In !");
     nav("/");
   };
-
-  //
 
   return (
     <GoogleLogin

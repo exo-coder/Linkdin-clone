@@ -1,6 +1,5 @@
 import React from "react";
 import { HeaderNavDatas } from "../../data/datas";
-import { useNavigate } from 'react-router-dom';
 import SginOutHook from "../../hooks/SginOutHook";
 import {
   Main,
@@ -13,7 +12,7 @@ import {
   NavItems,
   NavItem,
   User,
-  WorkList,
+  Menu,
 } from "./HeaderStyles";
 //Redux
 import { useSelector } from "react-redux";
@@ -23,10 +22,6 @@ export default function Header() {
   const userName = useSelector(selectUserName);
   const userPhoto = useSelector(selectUserPhoto);
 
-  let nav = useNavigate();
-  const Logout = () => {
-    nav("/");
-  }
   return (
     <Main>
       <Content>
@@ -46,7 +41,7 @@ export default function Header() {
             <NavItems>
             {HeaderNavDatas.map((item) => {
               return (
-                <NavItem className="" key={item.id}>
+                <NavItem key={item.id}>
                   <a href="/home">
                     <img src={item.img} alt="" />
                     <span>{item.name}</span>
@@ -57,20 +52,16 @@ export default function Header() {
             </NavItems>
             <User>
               <a>
-                <img src="/images/user.svg" alt="" />
-                <span>{userName}</span>
+                <img src={userPhoto ? userPhoto :  '/images/user.svg'} alt="" />
+                <span>{userName ? userName : "Me"}</span>
               </a>
               <SginOutHook />
             </User>
-            <WorkList>
+            <Menu>
               <a href="/home">
                 <img src="/images/nav-work.svg" alt="" />
-                <span>
-                  Work
-                  <img src="/images/down-icon.svg" alt="" />
-                </span>
               </a>
-            </WorkList>
+            </Menu>
           </NavWrap>
         </Nav>
       </Content>
